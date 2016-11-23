@@ -5,9 +5,9 @@ import { Ng2BootstrapConfig, Ng2BootstrapTheme } from '../ng2-bootstrap';
 
 let w:any = window;
 
-if (w && w.__theme === 'bs4') {
-  Ng2BootstrapConfig.theme = Ng2BootstrapTheme.BS4;
-}
+// if (w && w.__theme === 'bs4') {
+//   Ng2BootstrapConfig.theme = Ng2BootstrapTheme.BS4;
+// }
 
 let template = require('./demo.template.html');
 

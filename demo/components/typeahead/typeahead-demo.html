@@ -11,11 +11,16 @@
   <template #customItemTemplate let-model="item" let-index="index">
     <h5>This is: {{model | json}} Index: {{ index }}</h5>
   </template>
+  <template #customFooterTemplate>
+    <button>Name</button>
+  </template>
   <h4>Custom item template</h4>
   <pre class="card card-block card-header">Model: {{customSelected | json}}</pre>
   <input [(ngModel)]="customSelected"
          [typeahead]="statesComplex"
          [typeaheadItemTemplate]="customItemTemplate"
+         [typeaheadOptionsLimit]="5"
+         [typeaheadFooterTemplate]="customFooterTemplate"
          [typeaheadOptionField]="'name'"
          (typeaheadOnSelect)="typeaheadOnSelect($event)"
          class="form-control">

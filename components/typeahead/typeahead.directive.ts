@@ -45,7 +45,7 @@ export class TypeaheadDirective implements OnInit {
   @Input() public typeaheadWordDelimiters:string = ' ';
   @Input() public typeaheadPhraseDelimiters:string = '\'"';
   @Input() public typeaheadItemTemplate:TemplateRef<any>;
-
+  @Input() public typeaheadFooterTemplate:TemplateRef<any>;
   // not yet implemented
   // @Input() protected typeaheadAppendToBody:boolean;
   // @Input() protected typeaheadEditable:boolean;

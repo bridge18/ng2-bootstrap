@@ -60,6 +60,10 @@ const bs3 = `
         </a>
       </li>
     </template>
+    <li *ngIf="footerTemplate" class="dropdown-footer">
+      <template [ngTemplateOutlet]="footerTemplate">
+      </template>
+    </li>
   </ul>
 `;
 let isBS4 = Ng2BootstrapConfig.theme === Ng2BootstrapTheme.BS4;
@@ -93,6 +97,11 @@ export class TypeaheadContainerComponent {
 
   public get itemTemplate():TemplateRef<any> {
     return this.parent ? this.parent.typeaheadItemTemplate : undefined;
+  }
+
+  public get footerTemplate():TemplateRef<any> {
+    console.log(this.parent.typeaheadFooterTemplate);
+    return this.parent ? this.parent.typeaheadFooterTemplate : undefined;
   }
 
   public set matches(value:Array<TypeaheadMatch>) {
